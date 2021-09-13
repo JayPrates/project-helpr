@@ -67,10 +67,15 @@ function initMap() {
 
 	directionsRenderer.setMap(map);
 
-	document.querySelector(".find-btn").addEventListener("click", () => {
-		console.log("calculating");
-		calculateAndDisplayRoute(directionsService, directionsRenderer);
-	});
+	var allBtns = document.getElementsByClassName("find-btn");
+    console.log("this is crazy", allBtns)
+    console.log("this is the item", allBtns.item(0));
+    for (var i = 0; i < allBtns.length; i++) {
+        console.log("calculating", allBtns.item(i));
+        allBtns.item(i).addEventListener("click", () => {
+            calculateAndDisplayRoute(directionsService, directionsRenderer);
+     })
+	}
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
