@@ -2,23 +2,17 @@ const router = require("express").Router();
 const User = require("../models/User.model");
 const bcrypt = require("bcryptjs");
 
-//Requires login from user
-function requireLogin(req, res, next) {
-	if (req.session.currentUser) {
-		next();
-	} else {
-		res.redirect("/login");
-	}
-}
-
+//Signup Get Route
 router.get("/signup", (req, res) => {
 	res.render("auth/signup");
 });
 
+//Login Get Route
 router.get("/login", (req, res) => {
 	res.render("auth/login");
 });
 
+//Signup Post Route
 router.post("/signup", async (req, res) => {
 	const { username, password } = req.body;
 	if (username === "" || password === "") {
@@ -44,6 +38,7 @@ router.post("/signup", async (req, res) => {
 	res.redirect("/");
 });
 
+//Login Post Route
 router.post("/login", async (req, res) => {
 	const { username, password } = req.body;
 	if (username === "" || password === "") {
@@ -65,6 +60,7 @@ router.post("/login", async (req, res) => {
 	}
 });
 
+//Logout Post Route
 router.post("/logout", (req, res) => {
 	req.session.destroy();
 	res.redirect("/");
