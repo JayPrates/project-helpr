@@ -1,19 +1,24 @@
-let latitude;
-let longitude;
+//I have values, João don't feelsbadman
+let latitude = 38.71210642635249;
+let longitude = -9.124274630421395;
 
 const successCallback = (position) => {
 	latitude = position.coords.latitude;
-	console.log('latitude-------->', latitude);
+	console.log("latitude-------->", latitude);
 	longitude = position.coords.longitude;
-	console.log('longitude-------->', longitude);
-}
+	console.log("longitude-------->", longitude);
+};
 const errorCallback = (error) => {
 	console.log(error);
-}
+};
 /* navigator.geolocation.getCurrentPosition(successCallback, errorCallback); */
-const watchId = navigator.geolocation.watchPosition(successCallback, errorCallback, {
-	enableHighAccuracy: true
-});
+const watchId = navigator.geolocation.watchPosition(
+	successCallback,
+	errorCallback,
+	{
+		enableHighAccuracy: true,
+	}
+);
 
 function initMap() {
 	const directionsRenderer = new google.maps.DirectionsRenderer();
@@ -38,7 +43,6 @@ function initMap() {
 		map: map,
 	});
 
-
 	directionsRenderer.setMap(map);
 	calculateAndDisplayRoute(directionsService, directionsRenderer);
 	document.getElementById("mode").addEventListener("change", () => {
@@ -58,5 +62,5 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 		})
 		.then((response) => {
 			directionsRenderer.setDirections(response);
-		})
+		});
 }

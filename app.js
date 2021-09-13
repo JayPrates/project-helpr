@@ -20,13 +20,18 @@ require("./config")(app);
 
 // default value for title local
 const projectName = "project2-helpr";
-const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
+const capitalized = (string) =>
+	string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)} created with IronLauncher`;
 app.locals.gmapsKey = process.env.GOOGLE_MAPS_KEY;
 
 // 👇 Start handling routes here
 const index = require("./routes/index");
+app.use("/", index);
+const signup = require("./routes/signup");
+app.use("/", index);
+const login = require("./routes/login");
 app.use("/", index);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
