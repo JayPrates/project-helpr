@@ -29,10 +29,8 @@ app.locals.gmapsKey = process.env.GOOGLE_MAPS_KEY;
 // 👇 Start handling routes here
 const index = require("./routes/index");
 app.use("/", index);
-/* const signup = require("./routes/signup");
-app.use("/", index);
-const login = require("./routes/login");
-app.use("/", index); */
+const auth = require("./routes/auth");
+app.use("/", auth);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
