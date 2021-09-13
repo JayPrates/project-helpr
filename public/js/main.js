@@ -1,12 +1,34 @@
+// localStorage.setItem("vOneLocalStorage", latitude);
+// localStorage.setItem("vTwoLocalStorage", longitude);
+
 //I have values, João don't feelsbadman
 let latitude = 38.71210642635249;
 let longitude = -9.124274630421395;
+
+const send = (e) => {
+	const title = document.getElementById("requestTitle").value;
+	const description = document.getElementById("requestDescription").value;
+	axios.post("/request", { latitude, longitude, title, description });
+};
+
+let newOrigin;
+let newDestination;
+
+const setRoute = (latitude, longitude) => {
+	console.log("latitude", latitude);
+	console.log("longitude", longitude);
+	document.getElementById("to").value = `${latitude}, ${longitude}`;
+	//	newDestination = (all)
+	document.getElementById("mode").value = "WALKING";
+	directionsRenderer.setDirections(response);
+};
 
 const successCallback = (position) => {
 	latitude = position.coords.latitude;
 	console.log("latitude-------->", latitude);
 	longitude = position.coords.longitude;
 	console.log("longitude-------->", longitude);
+	document.getElementById("from").value = `${latitude}, ${longitude}`;
 };
 const errorCallback = (error) => {
 	console.log(error);
@@ -44,8 +66,9 @@ function initMap() {
 	});
 
 	directionsRenderer.setMap(map);
-	calculateAndDisplayRoute(directionsService, directionsRenderer);
-	document.getElementById("mode").addEventListener("change", () => {
+
+	document.querySelector(".find-btn").addEventListener("click", () => {
+		console.log("calculating");
 		calculateAndDisplayRoute(directionsService, directionsRenderer);
 	});
 }
@@ -57,7 +80,6 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 		.route({
 			origin: document.getElementById("from").value,
 			destination: document.getElementById("to").value,
-
 			travelMode: google.maps.TravelMode[selectedMode],
 		})
 		.then((response) => {

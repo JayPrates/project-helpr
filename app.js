@@ -8,12 +8,24 @@ require("./db");
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 const express = require("express");
-
+const session = require("express-session");
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
 const app = express();
+
+app.use(
+	session({
+		secret: process.env.SESSION_SECRET,
+		cookie: {
+			sameSite: true,
+			httpOnly: true,
+			maxAge: 6000000, // ms = 1min
+		},
+		rolling: true,
+	})
+);
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
