@@ -214,3 +214,7 @@ a.article:hover {
 #req-send-btn{
 	text-align: center;
 }
+
+.btn-primary {
+	background-color: #17a2b8;
+}
