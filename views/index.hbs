@@ -13,7 +13,10 @@
 
 {{! Help Request Button }}
 <div id="form-container">
-	<form>
+	<a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Make a Requst</a>
+	 <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <form>
 		<label>Title</label>
 		<input type="text" id="requestTitle" name="title" />
 
@@ -22,7 +25,10 @@
 
 		<button onclick="send()">Send</button>
 	</form>
+      </div>
+    </div>
 </div>
+
 
 
 <b>Mode of Travel</b>
