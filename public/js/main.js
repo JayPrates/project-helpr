@@ -1,6 +1,3 @@
-// localStorage.setItem("vOneLocalStorage", latitude);
-// localStorage.setItem("vTwoLocalStorage", longitude);
-
 //I have values, João don't feelsbadman
 let latitude = 38.71210642635249;
 let longitude = -9.124274630421395;
@@ -33,7 +30,6 @@ const successCallback = (position) => {
 const errorCallback = (error) => {
 	console.log(error);
 };
-/* navigator.geolocation.getCurrentPosition(successCallback, errorCallback); */
 const watchId = navigator.geolocation.watchPosition(
 	successCallback,
 	errorCallback,
