@@ -58,3 +58,8 @@ body {
 }
 
 /* Side Navbar Styling */
+
+#loginPage{
+	position: absolute;
+	z-index: 200;
+}

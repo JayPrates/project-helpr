@@ -12,6 +12,8 @@ const session = require("express-session");
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
+const helpers = require("handlebars-helpers");
+hbs.registerHelper(helpers());
 
 const app = express();
 
@@ -26,6 +28,18 @@ app.use(
 		rolling: true,
 	})
 );
+
+function getCurrentLoggedUser(req, res, next) {
+    if(req.session && req.session.currentUser) {
+        app.locals.loggedInUser = req.session.currentUser.username;
+    } else {
+        app.locals.loggedInUser = "";
+    }
+    next();
+}
+
+
+app.use(getCurrentLoggedUser);
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);

@@ -1,4 +1,4 @@
-{{!-- <div id="floating-panel">
+{{! <div id="floating-panel">
 	<div>
 		<div>
 			<input type="text" id="from" , placeholder="Origin" />
@@ -9,19 +9,21 @@
 			<input type="text" id="to" , placeholder="Destination" />
 		</div>
 	</div>
-</div> --}}
-
+</div> }}
 
 {{! Help Request Button }}
-<form class="form">
-	<label>Title</label>
-	<input type="text" id="requestTitle" name="title" />
+<div id="form-container">
+	<form>
+		<label>Title</label>
+		<input type="text" id="requestTitle" name="title" />
 
-	<label>Description</label>
-	<input type="text" id="requestDescription" name="description" />
+		<label>Description</label>
+		<input type="text" id="requestDescription" name="description" />
 
-	<button onclick="send()">Send</button>
-</form>
+		<button onclick="send()">Send</button>
+	</form>
+</div>
+
 
 <b>Mode of Travel</b>
 <select id="mode">
@@ -32,11 +34,13 @@
 	<option value="TRANSIT">Transit</option>
 </select>
 
+
+
 <div id="floating-panel" class="help-wrapper">
 	<div>
 		<div id="map"></div>
-		<div class="content">
+		<div>
 			<input type="text" id="from" , placeholder="Origin" />
 			<input type="text" id="to" , placeholder="Destination" />
 	</div>
-</div>
+</div> 

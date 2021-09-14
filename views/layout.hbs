@@ -41,10 +41,13 @@
 			defer
 		></script>
 		<!-- Our Custom CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+		/>
+
 		<link rel="stylesheet" href="/stylesheets/style2.css" />
 
-		{{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
 	</head>
 
 	<body>
@@ -57,15 +60,28 @@
 				</div>
 
 				<div class="sidebar-header">
-					<h3>Bootstrap Sidebar</h3>
+					<h3>Helpr</h3>
 				</div>
 
 				<ul class="list-unstyled components">
-					<p>Dummy Heading</p>
+					{{#if loggedInUser}}
+					<label>Hello {{loggedInUser}}</label>
+					<li>
+						<a href="/logout">Logout</a>
+					</li>
+					{{/if}}
+					<li>
+						<a href="/signup">Signup</a>
+					</li>
+					<li>
+						<a href="/login">Login</a>
+					</li>
+					<hr/>
+
 					{{#each allRequests}}
 
 						<li>
-							<label>User</label>
+							<label>{{allUsers.username}}</label>
 							<label>Title:</label>
 							{{title}}
 							<p>
@@ -129,7 +145,9 @@
 			<!-- Dark Overlay element -->
 			<div class="overlay"></div>
 		</div>
+
 		{{{body}}}
+
 		<script
 			src="https://maps.googleapis.com/maps/api/js?key={{gmapsKey}}&callback=initMap&libraries=&v=weekly"
 			async

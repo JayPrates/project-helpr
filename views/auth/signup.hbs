@@ -1,10 +1,15 @@
-<h2>Signup!</h2>
+<div class="authPageStyle">
+<h2>Signup</h2>
+
 <form action="/signup" method="POST">
-
-	<label>Username</label>
-	<input type="text" name="username" />
-	<label>Password</label>
-	<input type="password" name="password" />
-
-	<button type="submit">Signup</button>
+<label>Username</label>
+<input type="text" name="username" required/>
+<label>Password</label>
+<input type="password" name="password" required/>
+<button type="submit">Signup</button>
 </form>
+
+{{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+{{/if}}
+</div>
