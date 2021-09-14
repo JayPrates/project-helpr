@@ -57,7 +57,7 @@
 				</li>
 				{{/if}}
 				<hr />
-
+				{{#if loggedInUser}}
 				{{#each allRequests}}
 
 				<li>
@@ -79,6 +79,7 @@
 					<hr/>
 				</li>
 				{{/each}}
+				{{/if}}
 				<li>
 					<a href="#">About</a>
 					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
