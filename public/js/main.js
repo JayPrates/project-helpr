@@ -63,7 +63,7 @@ function initMap() {
 
 	directionsRenderer.setMap(map);
 
-	var allBtns = document.getElementsByClassName("find-btn");
+	var allBtns = document.getElementsByClassName("btn btn-secondary");
 	console.log("this is crazy", allBtns);
 	console.log("this is the item", allBtns.item(0));
 	for (var i = 0; i < allBtns.length; i++) {

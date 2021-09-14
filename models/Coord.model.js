@@ -14,8 +14,7 @@ const coordSchema = mongoose.Schema({
 		type: Number,
 	},
 	user: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: "User",
+		type: String,
 	},
 });
 

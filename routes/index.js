@@ -14,9 +14,8 @@ const User = require("../models/User.model");
 
 router.get("/", async (req, res, next) => {
 	const allRequests = await Coordinates.find();
-	const allUsers = await User.find();
-	console.log("rendering", allRequests);
-	res.render("index", { allRequests, allUsers});
+	/* console.log("rendering", allRequests); */
+	res.render("index", { allRequests });
 });
 
 router.get("/request", async (req, res) => {
@@ -25,20 +24,24 @@ router.get("/request", async (req, res) => {
 
 router.post("/request", async (req, res) => {
 	const { title, description, latitude, longitude, user } = req.body;
-	console.log("latitude", latitude);
+	/* console.log("latitude", latitude);
 	console.log("long", longitude);
 	console.log("title", title);
 	console.log("description", description);
+	console.log('this user', req.session.currentUser); */
+
+	const thisUsa = await User.findById(req.session.currentUser);
+	console.log(thisUsa);
 
 	await Coordinates.create({
 		title,
 		description,
 		lat: latitude,
 		long: longitude,
-		user: req.session.currentUser,
+		user: thisUsa.username,
 	});
 	const allCoords = await Coordinates.find();
-	console.log(allCoords);
+	/* console.log(allCoords); */
 	res.redirect("/");
 });
 
