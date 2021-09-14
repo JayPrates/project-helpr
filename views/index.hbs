@@ -1,4 +1,4 @@
-<div id="floating-panel">
+{{!-- <div id="floating-panel">
 	<div>
 		<div>
 			<input type="text" id="from" , placeholder="Origin" />
@@ -9,27 +9,8 @@
 			<input type="text" id="to" , placeholder="Destination" />
 		</div>
 	</div>
-</div>
+</div> --}}
 
-{{#each allRequests}}
-	<ul>
-		<li>
-			<label>Title:</label>
-			{{title}}
-			<p>
-				<label>Description</label>
-				{{description}}
-			</p>
-
-			<div>{{lat}}</div>
-			<div>{{long}}</div>
-			<button
-				class="find-btn"
-				onclick="setRoute('{{lat}}', '{{long}}')"
-			>Find route</button>
-		</li>
-	</ul>
-{{/each}}
 
 {{! Help Request Button }}
 <form>
@@ -51,4 +32,11 @@
 	<option value="TRANSIT">Transit</option>
 </select>
 
-<div id="map"></div>
+<div id="floating-panel" class="help-wrapper">
+	<div>
+		<div id="map"></div>
+		<div class="content">
+			<input type="text" id="from" , placeholder="Origin" />
+			<input type="text" id="to" , placeholder="Destination" />
+	</div>
+</div>

@@ -64,13 +64,13 @@ function initMap() {
 	directionsRenderer.setMap(map);
 
 	var allBtns = document.getElementsByClassName("find-btn");
-    console.log("this is crazy", allBtns)
-    console.log("this is the item", allBtns.item(0));
-    for (var i = 0; i < allBtns.length; i++) {
-        console.log("calculating", allBtns.item(i));
-        allBtns.item(i).addEventListener("click", () => {
-            calculateAndDisplayRoute(directionsService, directionsRenderer);
-     })
+	console.log("this is crazy", allBtns);
+	console.log("this is the item", allBtns.item(0));
+	for (var i = 0; i < allBtns.length; i++) {
+		console.log("calculating", allBtns.item(i));
+		allBtns.item(i).addEventListener("click", () => {
+			calculateAndDisplayRoute(directionsService, directionsRenderer);
+		});
 	}
 }
 
