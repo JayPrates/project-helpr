@@ -34,7 +34,7 @@ router.post("/request", async (req, res) => {
 		description,
 		lat: latitude,
 		long: longitude,
-		//user: req.session.currentUser,
+		user: req.session.currentUser,
 	});
 	const allCoords = await Coordinates.find();
 	console.log(allCoords);
