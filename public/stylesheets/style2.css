@@ -4,7 +4,6 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-	padding: 50px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -17,7 +16,7 @@ h1 {
 }
 
 #map {
-	position: absolute;
+	/* position: absolute; */
 	height: 100%;
 	width: 100%;
 	background: #eee;
@@ -209,7 +208,6 @@ a.article:hover {
 
 #content {
 	width: 100%;
-	padding: 20px;
 	min-height: 100vh;
 	transition: all 0.3s;
 	position: absolute;
@@ -217,4 +215,13 @@ a.article:hover {
 	right: 0;
 }
 
+#form-container {
+	position: absolute;
+	top: 100px;
+	left: 500px;
+	z-index: 99;
+}
 
+#floating-panel {
+	margin-top: 48px;
+}
