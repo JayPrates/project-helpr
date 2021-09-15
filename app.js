@@ -23,7 +23,7 @@ app.use(
 		cookie: {
 			sameSite: true,
 			httpOnly: true,
-			maxAge: 6000000, // ms = 1min
+			maxAge: 6000000000, // ms = 1min
 		},
 		rolling: true,
 	})

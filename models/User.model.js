@@ -7,6 +7,7 @@ const userSchema = new Schema({
 		unique: true,
 	},
 	password: String,
+	imageUrl: String,
 });
 
 const User = model("User", userSchema);

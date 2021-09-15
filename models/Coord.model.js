@@ -16,6 +16,9 @@ const coordSchema = mongoose.Schema({
 	user: {
 		type: String,
 	},
+	userImg: {
+		type: String,
+	}
 });
 
 const Coord = mongoose.model("Coord", coordSchema);

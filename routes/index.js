@@ -23,14 +23,14 @@ router.get("/request", async (req, res) => {
 });
 
 router.post("/request", async (req, res) => {
-	const { title, description, latitude, longitude, user } = req.body;
+	const { title, description, latitude, longitude } = req.body;
 	/* console.log("latitude", latitude);
 	console.log("long", longitude);
 	console.log("title", title);
 	console.log("description", description);
 	console.log('this user', req.session.currentUser); */
 
-	const thisUsa = await User.findById(req.session.currentUser);
+	const thisUsa = await User.findById(req.session.currentUser._id);
 	console.log(thisUsa);
 
 	await Coordinates.create({
@@ -39,16 +39,12 @@ router.post("/request", async (req, res) => {
 		lat: latitude,
 		long: longitude,
 		user: thisUsa.username,
+		userImg: thisUsa.imageUrl
 	});
 	const allCoords = await Coordinates.find();
 	/* console.log(allCoords); */
 	res.redirect("/");
 });
 
-router.post("/request", async (req, res) => {
-	const allRequests = Coordinates.find();
-	console.log("rendering", allRequests);
-	res.render("/", allRequests);
-});
 
 module.exports = router;
