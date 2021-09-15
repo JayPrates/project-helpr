@@ -173,6 +173,14 @@ a.article:hover {
 	color: #fff !important;
 }
 
+.list-unstyled.components {
+	font-size: 14px;
+	margin-left: 15px;
+	margin-bottom: 8px;
+	justify-content: center;
+	text-align: left;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -210,6 +218,7 @@ a.article:hover {
 
 #req-send-btn {
 	text-align: center;
+	margin-top: 8px;
 }
 
 .btn-primary {
@@ -226,6 +235,17 @@ a.article:hover {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+}
+
+.loltwo {
+	font-weight: bold;
+}
+
+.formStyle {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	color: #17a2b8;
+	font-size: 17px;
 }
 
 /* ---------------------------------------------------
@@ -250,15 +270,8 @@ a.article:hover {
 	outline: none;
 }
 
-h2 {
+.authTitle {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	color: #00b7ff;
-}
-
-label {
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
-	font-size: 16px;
-	color: #17a2b8;
 }
