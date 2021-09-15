@@ -22,8 +22,6 @@ h1 {
 	background: #eee;
 }
 
-
-
 /*
     DEMO STYLE
 */
@@ -44,7 +42,6 @@ a:focus {
 	text-decoration: none;
 	transition: all 0.3s;
 }
-
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -190,7 +187,7 @@ a.article:hover {
 
 #form-container {
 	position: absolute;
-	margin:0 auto;
+	margin: 0 auto;
 	margin-top: 8;
 	width: fit-content;
 	left: 0;
@@ -203,29 +200,65 @@ a.article:hover {
 	margin-top: 35px;
 }
 
-.authPageStyle{
-	margin: 20% 0 0 33%;
+.authPageStyle {
+	margin: 16% 0 0 38%;
 }
 
 #coords {
 	display: none;
 }
 
-#req-send-btn{
+#req-send-btn {
 	text-align: center;
 }
 
 .btn-primary {
 	background-color: #17a2b8;
+	border-color: #17a2b8;
 }
 
-.bg-light{
+.bg-light {
 	background-color: rgb(123, 123, 123) !important;
 }
 
-.lol{
+.lol {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+}
+
+/* ---------------------------------------------------
+   AUTHENTICATION PAGE STYLING
+----------------------------------------------------- */
+
+.authTextStyle[type="text"],
+.authTextStyle[type="password"] {
+	width: 30%;
+	padding: 12px 20px;
+	margin: 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #17a2b8;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.authTextStyle[type="text"]:focus,
+.authTextStyle[type="password"]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+h2 {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	color: #00b7ff;
+}
+
+label {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: 16px;
+	color: #17a2b8;
 }

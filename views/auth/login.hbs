@@ -1,15 +1,27 @@
-<div class='authPageStyle'>
-<h2>Login</h2>
+<div class="authPageStyle">
+	<h2>Login</h2>
 
-<form action="/login" method="POST">
-<label>Username</label>
-<input type="text" name="username" required/>
-<label>Password</label>
-<input type="password" name="password" required/>
-<button type="submit">Login</button>
-</form>
+	<form action="/login" method="POST">
+		<label>Username</label>
+		<input
+			class="authTextStyle"
+			type="text"
+			name="username"
+			placeholder="Enter your username"
+			required
+		/>
+		<label>Password</label>
+		<input
+			class="authTextStyle"
+			type="password"
+			name="password"
+			placeholder="Enter your username"
+			required
+		/>
+		<button type="submit" class="btn btn-dark">Login</button>
+	</form>
 
-{{#if errorMessage}}
-    <p>{{errorMessage}}</p>
-{{/if}}
+	{{#if errorMessage}}
+		<p>{{errorMessage}}</p>
+	{{/if}}
 </div>
