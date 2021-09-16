@@ -1,30 +1,32 @@
-<div class="authPageStyle">
-	<h2 class="authTitle">Signup</h2>
+<body class="authBody">
+	<div class="authPageStyle">
+		<h2 class="authTitle">Signup</h2>
 
-	<form action="/signup" method="POST" enctype="multipart/form-data">
-		<label>Username</label>
-		<input
-			class="authTextStyle"
-			type="text"
-			name="username"
-			placeholder="Enter your username"
-			required
-		/>
-		<label>Password</label>
-		<input
-			class="authTextStyle"
-			type="password"
-			name="password"
-			placeholder="Enter your password"
-			required
-		/>
-		<label>Image</label>
-		<input type="file" name="image" />
-		<hr />
-		<button type="submit" class="btn btn-dark">Signup</button>
-	</form>
+		<form action="/signup" method="POST" enctype="multipart/form-data">
+			<label>Username</label>
+			<input
+				class="authTextStyle"
+				type="text"
+				name="username"
+				placeholder="Enter your username"
+				required
+			/>
+			<label>Password</label>
+			<input
+				class="authTextStyle"
+				type="password"
+				name="password"
+				placeholder="Enter your password"
+				required
+			/>
+			<label>Image</label>
+			<input type="file" name="image" />
+			<hr />
+			<button type="submit" class="btn btn-dark">Signup</button>
+		</form>
 
-	{{#if errorMessage}}
-		<p>{{errorMessage}}</p>
-	{{/if}}
-</div>
+		{{#if errorMessage}}
+			<p>{{errorMessage}}</p>
+		{{/if}}
+	</div>
+</body>

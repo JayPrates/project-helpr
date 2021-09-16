@@ -48,10 +48,10 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-	width: 250px;
+	width: 300px;
 	position: fixed;
 	top: 0;
-	left: -250px;
+	left: -300px;
 	height: 100vh;
 	z-index: 999;
 	background: #7386d5;
@@ -175,7 +175,7 @@ a.article:hover {
 
 .list-unstyled.components {
 	font-size: 14px;
-	margin-left: 15px;
+	margin-left: 25px;
 	margin-bottom: 8px;
 	justify-content: center;
 	text-align: left;
@@ -254,7 +254,7 @@ a.article:hover {
 
 .authTextStyle[type="text"],
 .authTextStyle[type="password"] {
-	width: 30%;
+	width: 250px;
 	padding: 12px 20px;
 	margin: 10px 0;
 	display: flex;
@@ -274,4 +274,29 @@ a.article:hover {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	color: #00b7ff;
+}
+
+.authBody {
+	background: hsla(188, 78%, 41%, 1);
+	display: flex;
+
+	background: linear-gradient(
+		90deg,
+		hsla(188, 78%, 41%, 1) 0%,
+		hsla(0, 0%, 100%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(188, 78%, 41%, 1) 0%,
+		hsla(0, 0%, 100%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(188, 78%, 41%, 1) 0%,
+		hsla(0, 0%, 100%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#17A2B8", endColorstr="#FFFFFF", GradientType=1 );
 }
