@@ -254,7 +254,7 @@ a.article:hover {
 
 .authTextStyle[type="text"],
 .authTextStyle[type="password"] {
-	width: 250px;
+	width: 33%;
 	padding: 12px 20px;
 	margin: 10px 0;
 	display: flex;
@@ -278,7 +278,6 @@ a.article:hover {
 
 .authBody {
 	background: hsla(188, 78%, 41%, 1);
-	display: flex;
 
 	background: linear-gradient(
 		90deg,
