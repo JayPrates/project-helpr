@@ -14,6 +14,10 @@ router.get("/request", async (req, res) => {
 	res.redirect("/");
 });
 
+router.get("/about", (req, res) => {
+	res.render("about");
+});
+
 router.post("/request", async (req, res) => {
 	const { title, description, latitude, longitude } = req.body;
 
