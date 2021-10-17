@@ -20,7 +20,7 @@ router.post("/request", async (req, res) => {
 	const thisUsa = await User.findById(req.session.currentUser._id);
 	console.log(thisUsa);
 
-	await Coordinates.create({
+	const thisCoord = await Coordinates.create({
 		title,
 		description,
 		lat: latitude,
@@ -28,6 +28,8 @@ router.post("/request", async (req, res) => {
 		user: thisUsa.username,
 		userImg: thisUsa.imageUrl,
 	});
+
+
 	const allCoords = await Coordinates.find();
 	/* console.log(allCoords); */
 	res.redirect("/");

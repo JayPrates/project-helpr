@@ -12,8 +12,6 @@ let newOrigin;
 let newDestination;
 
 const setRoute = (latitude, longitude) => {
-	console.log("latitude", latitude);
-	console.log("longitude", longitude);
 	document.getElementById("to").value = `${latitude}, ${longitude}`;
 	//	newDestination = (all)
 	document.getElementById("mode").value = "WALKING";
@@ -243,10 +241,7 @@ function initMap() {
 	directionsRenderer.setMap(map);
 
 	var allBtns = document.getElementsByClassName("btn btn-secondary");
-	console.log("this is crazy", allBtns);
-	console.log("this is the item", allBtns.item(0));
 	for (var i = 0; i < allBtns.length; i++) {
-		console.log("calculating", allBtns.item(i));
 		allBtns.item(i).addEventListener("click", () => {
 			calculateAndDisplayRoute(directionsService, directionsRenderer);
 		});
