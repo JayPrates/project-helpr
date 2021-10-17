@@ -30,15 +30,14 @@ app.use(
 );
 
 function getCurrentLoggedUser(req, res, next) {
-    if(req.session && req.session.currentUser) {
-        app.locals.loggedInUser = req.session.currentUser.username;
+	if (req.session && req.session.currentUser) {
+		app.locals.loggedInUser = req.session.currentUser.username;
 		app.locals.loggedUserImg = req.session.currentUser.imageUrl;
-    } else {
-        app.locals.loggedInUser = "";
-    }
-    next();
+	} else {
+		app.locals.loggedInUser = "";
+	}
+	next();
 }
-
 
 app.use(getCurrentLoggedUser);
 
