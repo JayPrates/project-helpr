@@ -20,9 +20,7 @@ const setRoute = (latitude, longitude) => {
 
 const successCallback = (position) => {
 	latitude = position.coords.latitude;
-	console.log("latitude-------->", latitude);
 	longitude = position.coords.longitude;
-	console.log("longitude-------->", longitude);
 	document.getElementById("from").value = `${latitude}, ${longitude}`;
 };
 const errorCallback = (error) => {
