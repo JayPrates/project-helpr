@@ -3,7 +3,6 @@
 
 
 
-# Gamedia - Back End
 <p align="center">
 <img src='gamediaGIF.gif'/>
 </p>
