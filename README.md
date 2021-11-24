@@ -8,7 +8,10 @@
 </p>
 
 
+<p align="center">
 "A Co-Helping Platform"
+</p>
+
 
 <br />
 
