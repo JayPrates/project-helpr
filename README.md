@@ -78,7 +78,6 @@ linkedin - <a href="https://www.linkedin.com/in/joao-prates-az/"> João Prates <
 
 GitHub: [https://github.com/JayPrates/](https://github.com/JayPrates/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
