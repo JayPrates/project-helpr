@@ -4,7 +4,7 @@
 
 
 <p align="center">
-<img src='gamediaGIF.gif'/>
+<img src='helpr.png'/>
 </p>
 
 
